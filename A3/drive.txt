@@ -1,0 +1,38 @@
+functions.c --------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "functions.h"
+
+
+int num_int(int n){
+	printf("Introdueix un nombre enter: ");
+	scanf("%d",&n);
+	return n;
+}
+
+void binari(int num){
+	int bin=0, x=1;
+	while (num >= 1){
+		if (num % 2 == 1){
+			bin = bin + x;
+		}
+		num = num / 2;
+		x = x * 10;
+	}
+	printf("El número en binari és %d",bin);
+}
+
+
+
+
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+int num_int(int);
+void binari(int);
+
+

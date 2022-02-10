@@ -1,0 +1,53 @@
+functions.c --------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "functions.h"
+
+
+void num_calcul(){
+	int n, x=1, mitj_sus = 0, mitj_apr = 0, sus = 0, apr = 0;
+	for (int i = 1; i < 16; i++){
+		do {
+			printf ("Introdueix la nota %d: ",x);
+			scanf("%d",&n);
+			if (n>10 || n<0){
+				printf("\nERROR, introdueix una nota valida\n");
+				printf ("Introdueix la nota %d: ",x);
+				scanf("%d",&n);
+			}
+
+			if (n<5){
+				mitj_sus = mitj_sus + n;
+				sus = sus + 1;
+			}
+			else {
+				mitj_apr = mitj_apr + n;
+
+				apr = apr + 1;
+			}
+		} while (n>10 && n<0);
+		x++;
+	}
+	mitj_sus = mitj_sus / sus;
+	mitj_apr = mitj_apr / apr;
+	printf("La mitjana d'aprovats és de %d\n", mitj_apr);
+	printf("La mitjana de suspesos és de %d\n", mitj_sus);
+	printf("La quantitat d'aprovats és de %d\n", apr);
+	printf("La quantitat de suspesos és de %d", sus);
+
+}
+
+
+
+
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+void num_calcul();
+
+
+

@@ -1,0 +1,33 @@
+functions.c --------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "functions.h"
+
+
+void def_num(){
+	int num1, num2, canvi;
+	printf("Introdueix el primer número: ");
+	scanf("%d", &num1);
+	printf("Introdueix el segon número: ");
+	scanf("%d", &num2);
+	canvi = num1;
+	num1 = num2;
+	num2 = canvi;
+	printf("El primer número introduït ara és: %d\n", num2);
+	printf("El segon número introduït ara és: %d", num1);
+}
+
+
+
+
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+void def_num();
+
+
+

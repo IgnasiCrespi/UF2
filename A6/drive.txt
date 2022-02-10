@@ -1,0 +1,38 @@
+functions.c --------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "functions.h"
+
+
+int def_num(){
+	int num1;
+	printf("Introdueix el primer número: ");
+	scanf("%d", &num1);
+	return num1;
+}
+
+void algor(int num){
+	int sum, x, trobat, arr[num];
+	while ((x < num)&&(trobat==0)){
+		if ((sum + x) > num){
+			trobat ==1;
+		} else {
+			sum = x + sum;
+			x++;
+		}
+	}
+
+}
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+int def_num();
+void algor();
+
+
+
+

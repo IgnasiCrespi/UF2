@@ -1,0 +1,54 @@
+functions.c --------------------------------------------------------------------------
+#include <stdio.h>
+#include "functions.h"
+
+int get_x(){
+	int x;
+	do {
+		printf("Introdueix un nombre natural: ");
+		scanf("%d",&x);
+		if (x<0){
+			printf("\nERROR! Introdueix un nombre a partir del 0");
+		}
+	} while (x<0);
+	return x;
+}
+
+int get_y(){
+	int y;
+	do {
+		printf("Introdueix un nombre natural: ");
+		scanf("%d",&y);
+		if (y<=0){
+			printf("\nERROR! Introdueix un nombre a partir del 1");
+		}
+	} while (y<=0);
+	return y;
+}
+
+void quadrat(int x, int y){
+	int num = 1;
+	int canvi = y;
+	while (y != 0){
+		num *= x;
+		y--;
+	}
+	printf("%d elevat a %d és: %d",x,canvi,num);
+}
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+int get_x();
+int get_y();
+void quadrat();
+
+
+
+
+
+
+

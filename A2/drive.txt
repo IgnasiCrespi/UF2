@@ -1,0 +1,35 @@
+functions.c --------------------------------------------------------------------------
+
+#include <stdio.h>
+#include "functions.h"
+
+
+int num_validate(int n){
+	do {
+		printf("Introdueix un nombre de segons: ");
+		scanf("%d",&n);
+		if (n<0){
+			printf("Error, introdueix un nombre natural: ");
+		}
+	} while (n<0);
+	return n;
+}
+int convert(int s){
+	int m, h, d;
+	m = s / 60;
+	printf("\nEls segons en minuts són: %d",m);
+	h = m / 60;
+	printf("\nEls segons en hores són: %d",h);
+	d = h /24;
+	printf("\nEls segons en dies són: %d",d);
+}
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+int num_validate(int);
+int convert(int);
+

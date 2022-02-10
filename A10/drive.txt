@@ -1,0 +1,44 @@
+functions.c --------------------------------------------------------------------------
+#include <stdio.h>
+#include "functions.h"
+
+int get_bin(){
+	int bin;
+	printf("Introdueix un nombre natural: ");
+	scanf("%d",&bin);
+}
+
+int get_dec(int bin){
+	int num, var1, var2 = 1, dec;
+	num = bin;
+	while (num>0){
+		var1 = num % 10;
+		dec = dec + var1*var2;
+		num = num / 10;
+		var2 = var2 * 2;
+	}
+	return dec;
+}
+void print(int bin, int dec){
+	printf("El número en binari és: %d",bin);
+	printf("El número en decimal és: %d",dec);
+}
+
+functions.h ---------------------------------------------------------------------------
+
+#ifndef FUNCTIONS_H_
+#define FUNCTIONS_H_
+#endif
+
+int get_bin();
+int get_dec();
+void print();
+
+
+
+
+
+
+
+
+
